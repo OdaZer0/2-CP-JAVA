@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atores e Atrizes</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Atores e Atrizes</h1>
+    <p>Conheça alguns atores e atrizes de séries e filmes.</p>
+  </header>
+
+  <main>
+    <div class="filtros">
+      <div class="filtro">
+        <label for="busca">Buscar pelo nome:</label>
+        <input
+          id="busca"
+          type="text"
+          placeholder="Digite um nome..."
+          oninput="filtrarAtores()"
+        >
+      </div>
+      <div class="filtro">
+        <label for="pais">Filtrar por país:</label>
+        <select id="pais" onchange="filtrarAtores()">
+          <option value="">Todos os países</option>
+        </select>
+      </div>
+      <div class="filtro">
+        <label for="ano">Filtrar por ano:</label>
+        <select id="ano" onchange="filtrarAtores()">
+          <option value="">Todos os anos</option>
+        </select>
+      </div>
+    </div>
+
+    <div id="lista-atores" class="lista-atores"></div>
+    <p id="sem-resultados" class="sem-resultados" hidden>Nenhum ator ou atriz encontrado.</p>
+  </main>
+
+  <script src="dados.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

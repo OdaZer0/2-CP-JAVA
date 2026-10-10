@@ -1,0 +1,109 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #f2f3f7;
+  color: #25283a;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  padding: 32px 20px;
+  background-color: #5546a5;
+  color: white;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0 0 8px;
+}
+
+header p {
+  margin: 0;
+}
+
+main {
+  width: min(1100px, 90%);
+  margin: 30px auto;
+}
+
+.filtros {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 14px;
+  margin-bottom: 25px;
+}
+
+.filtro label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #c8c8d0;
+  border-radius: 6px;
+  background-color: white;
+  color: #25283a;
+  font-size: 16px;
+}
+
+input:focus,
+select:focus {
+  border-color: #5546a5;
+  outline: 2px solid #ded9ff;
+}
+
+.lista-atores {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  gap: 18px;
+}
+
+.ator {
+  overflow: hidden;
+  border-radius: 8px;
+  background-color: white;
+  box-shadow: 0 2px 8px #00000014;
+}
+
+.ator img {
+  display: block;
+  width: 100%;
+  height: 230px;
+  background-color: #e4e4e9;
+  object-fit: cover;
+  object-position: center 25%;
+}
+
+.ator-info {
+  padding: 14px;
+}
+
+.ator h2 {
+  margin: 0 0 10px;
+  font-size: 17px;
+}
+
+.ator p {
+  margin: 5px 0;
+  color: #60616b;
+  font-size: 14px;
+}
+
+.sem-resultados {
+  padding: 20px 0;
+  color: #60616b;
+  text-align: center;
+}
+
+@media (max-width: 650px) {
+  .filtros {
+    grid-template-columns: 1fr;
+  }
+}
